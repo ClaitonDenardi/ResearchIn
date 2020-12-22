@@ -63,6 +63,11 @@ export default function NewProject() {
           <input
             placeholder="Bolsa"
             value={holder}
+            type="number"
+            style={{
+              webkitAppearance: "none",
+              MozAppearance: "textfield",
+            }}
             onChange={(e) => setHolder(e.target.value)}
           />
 

@@ -18,7 +18,7 @@ export default function Register() {
       email,
       siape,
     };
-    if (email.includes("@inf.ufsm.br" || email.includes("@ufsm.br"))) {
+    if (email.includes("@inf.ufsm.br") || email.includes("@ufsm.br")) {
       try {
         const response = await api.post("professors", data);
         alert(`Seu ID de acesso: ${response.data.id}`);
@@ -64,6 +64,11 @@ export default function Register() {
           />
           <input
             placeholder="Siape"
+            type="number"
+            style={{
+              webkitAppearance: "none",
+              MozAppearance: "textfield",
+            }}
             value={siape}
             onChange={(e) => setSiape(e.target.value)}
             required
